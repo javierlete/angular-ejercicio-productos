@@ -1,0 +1,7 @@
+table, th, tbody td {
+    border: 1px solid darkgray;
+}
+
+tfoot button {
+    width: 100%;
+}
