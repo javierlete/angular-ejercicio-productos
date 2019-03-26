@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Producto } from '../producto';
 
 @Component({
   selector: 'app-productos-editar',
@@ -12,4 +13,7 @@ export class ProductosEditarComponent implements OnInit {
   ngOnInit() {
   }
 
+  guardarProducto(producto: Producto): void {
+    console.log(producto);
+  }
 }
