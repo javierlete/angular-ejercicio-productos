@@ -9,25 +9,11 @@
   </tr>
 </thead> 
 <tbody>
-  <tr>
-    <th>1</th>
-    <td>Nombre1</td>
-    <td>Descripción1</td>
-    <td>1,1</td>
-    <td><button>Editar</button><button>Borrar</button></td>
-  </tr>
-  <tr>
-    <th>2</th>
-    <td>Nombre2</td>
-    <td>Descripción2</td>
-    <td>2,2</td>
-    <td><button>Editar</button><button>Borrar</button></td>
-  </tr>
-  <tr>
-    <th>3</th>
-    <td>Nombre3</td>
-    <td>Descripción3</td>
-    <td>3,3</td>
+  <tr *ngFor="let producto of productos">
+    <th>{{ producto.id }}</th>
+    <td>{{ producto.nombre }}</td>
+    <td>{{ producto.descripcion }}</td>
+    <td>{{ producto.precio | currency: 'EUR'}}</td>
     <td><button>Editar</button><button>Borrar</button></td>
   </tr>
 </tbody>
