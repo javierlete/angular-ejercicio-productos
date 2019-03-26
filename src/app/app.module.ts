@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { ProductosListadoComponent } from './productos-listado/productos-listado.component';
 import { ProductosEditarComponent } from './productos-editar/productos-editar.component';
 
+import { FormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,7 +16,8 @@ import { ProductosEditarComponent } from './productos-editar/productos-editar.co
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

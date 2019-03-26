@@ -8,12 +8,16 @@ import { Producto } from '../producto';
 })
 export class ProductosEditarComponent implements OnInit {
 
+  producto: Producto = {
+    id: 11, nombre: 'Producto11', descripcion: 'Descripcion11', precio: 11.01
+  };
+
   constructor() { }
 
   ngOnInit() {
   }
 
-  guardarProducto(producto: Producto): void {
-    console.log(producto);
+  guardarProducto(): void {
+    console.log(this.producto);
   }
 }
