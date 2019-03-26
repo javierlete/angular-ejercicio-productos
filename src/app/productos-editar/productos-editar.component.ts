@@ -9,7 +9,7 @@ import { Producto } from '../producto';
 export class ProductosEditarComponent implements OnInit {
 
   producto: Producto = {
-    id: 11, nombre: 'Producto11', descripcion: 'Descripcion11', precio: 11.01
+    id: -1, nombre: '', descripcion: '', precio: 0.0
   };
 
   constructor() { }
