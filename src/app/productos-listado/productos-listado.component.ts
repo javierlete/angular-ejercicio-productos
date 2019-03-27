@@ -16,8 +16,13 @@ export class ProductosListadoComponent implements OnInit {
   ngOnInit() {
     //this.productos = this.productosService.getProductos();
     this.productosService.getProductos().subscribe(
-      (productos: Producto[]) => this.productos = productos
+      (productos: Producto[]) => {
+        this.productos = productos;
+        console.log('subscribe Listado', this.productos);
+      }
     );
+
+    console.log('ngOnInit Listado', this.productos);
   }
 
   borrarProducto(id: number) {
