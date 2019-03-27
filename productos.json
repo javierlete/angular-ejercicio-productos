@@ -20,9 +20,9 @@
     },
     {
       "id": 4,
-      "nombre": "asdlfjasdl",
-      "descripcion": "alsdkfjld",
-      "precio": 1234
+      "nombre": "Modificado",
+      "descripcion": "Modificada la descripción",
+      "precio": 4321
     },
     {
       "id": 5,

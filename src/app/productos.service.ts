@@ -30,8 +30,10 @@ export class ProductosService {
     return this.http.post<Producto>(this.url, producto, this.httpOptions);
   }
 
-  putProducto(producto: Producto) {
+  putProducto(producto: Producto): Observable<Producto> {
     console.log('putProducto', producto);
+
+    return this.http.put<Producto>(this.url + producto.id, producto, this.httpOptions);
   }
 
   deleteProducto(id: number) {
