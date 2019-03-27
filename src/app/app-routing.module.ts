@@ -6,6 +6,7 @@ import { ProductosEditarComponent } from './productos-editar/productos-editar.co
 const routes: Routes = [
   { path: '', redirectTo: '/listado', pathMatch: 'full' },
   { path: 'listado', component: ProductosListadoComponent },
+  { path: 'editar', component: ProductosEditarComponent },
   { path: 'editar/:id', component: ProductosEditarComponent }
 ];
 

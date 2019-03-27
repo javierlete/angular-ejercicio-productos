@@ -11,7 +11,7 @@ import { ProductosService } from '../productos.service';
 export class ProductosEditarComponent implements OnInit {
 
   producto: Producto = {
-    id: -1, nombre: '', descripcion: '', precio: 0.0
+    id: null, nombre: null, descripcion: null, precio: null
   };
 
   constructor(
@@ -20,10 +20,16 @@ export class ProductosEditarComponent implements OnInit {
 
   ngOnInit() {
     const id = this.route.snapshot.params.id;
-    this.producto = this.productosService.getProducto(id);
+    if(id){
+      this.producto = this.productosService.getProducto(id);
+    }
   }
 
   guardarProducto(): void {
-    this.productosService.postProducto(this.producto);
+    if(this.producto.id) {
+      this.productosService.putProducto(this.producto);
+    } else {
+      this.productosService.postProducto(this.producto);
+    }
   }
 }

@@ -14,7 +14,7 @@
     <td>{{ producto.nombre }}</td>
     <td>{{ producto.descripcion }}</td>
     <td>{{ producto.precio | currency: 'EUR'}}</td>
-    <td><button>Editar</button><button>Borrar</button></td>
+    <td><button [routerLink]="['/editar', producto.id]">Editar</button><button>Borrar</button></td>
   </tr>
 </tbody>
 <tfoot>
@@ -23,7 +23,7 @@
     <td></td>
     <td></td>
     <td></td>
-    <td><button>Añadir</button></td>
+    <td><button [routerLink]="['/editar']">Añadir</button></td>
   </tr>
 </tfoot>
 </table>

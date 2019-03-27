@@ -23,6 +23,10 @@ export class ProductosService {
   }
 
   postProducto(producto: Producto) {
-    console.log(producto);
+    console.log('postProducto', producto);
+  }
+
+  putProducto(producto: Producto) {
+    console.log('putProducto', producto);
   }
 }
