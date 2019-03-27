@@ -17,6 +17,18 @@
       "nombre": "Nombre765655",
       "descripcion": "Descripción7",
       "precio": 56.78
+    },
+    {
+      "id": 4,
+      "nombre": "asdlfjasdl",
+      "descripcion": "alsdkfjld",
+      "precio": 1234
+    },
+    {
+      "id": 5,
+      "nombre": "Nuevo",
+      "descripcion": "Nueva descripción",
+      "precio": 56.12
     }
   ]
 }
