@@ -22,7 +22,9 @@ export class ProductosEditarComponent implements OnInit {
   ngOnInit() {
     const id = this.route.snapshot.params.id;
     if(id){
-      this.producto = this.productosService.getProducto(id);
+      this.productosService.getProducto(id).subscribe(
+        (producto: Producto) => this.producto = producto
+      );
     }
   }
 

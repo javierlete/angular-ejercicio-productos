@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class ProductosService {
 
-  private url = 'http://localhost:3000/productos';
+  private url = 'http://localhost:3000/productos/';
 
   constructor(private http: HttpClient) {}
 
@@ -16,8 +16,8 @@ export class ProductosService {
     return this.http.get<Producto[]>(this.url);
   }
 
-  getProducto(id: number) {
-    return { id: id, nombre: 'Nombre' + id, descripcion: 'Descripción' + id, precio: id*1.1 };
+  getProducto(id: number) : Observable<Producto> {
+    return this.http.get<Producto>(this.url + id);
   }
 
   postProducto(producto: Producto) {
