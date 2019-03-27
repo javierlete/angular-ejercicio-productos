@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Producto } from '../producto';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ProductosService } from '../productos.service';
 
 @Component({
@@ -16,6 +16,7 @@ export class ProductosEditarComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
+    private router: Router,
     private productosService: ProductosService) { }
 
   ngOnInit() {
@@ -31,5 +32,7 @@ export class ProductosEditarComponent implements OnInit {
     } else {
       this.productosService.postProducto(this.producto);
     }
+
+    this.router.navigate(['']);
   }
 }
