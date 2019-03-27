@@ -32,7 +32,7 @@ export class ProductosEditarComponent implements OnInit {
     if(this.producto.id) {
       this.productosService.putProducto(this.producto);
     } else {
-      this.productosService.postProducto(this.producto);
+      this.productosService.postProducto(this.producto).subscribe();
     }
 
     this.router.navigate(['']);

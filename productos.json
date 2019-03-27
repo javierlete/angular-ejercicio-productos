@@ -11,6 +11,12 @@
       "nombre": "Producto2",
       "descripcion": "Descripcion2",
       "precio": 2.34
+    },
+    {
+      "id": 3,
+      "nombre": "Nombre765655",
+      "descripcion": "Descripción7",
+      "precio": 56.78
     }
   ]
 }

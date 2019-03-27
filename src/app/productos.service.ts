@@ -10,6 +10,10 @@ export class ProductosService {
 
   private url = 'http://localhost:3000/productos/';
 
+  const httpOptions = {
+    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+  };
+
   constructor(private http: HttpClient) {}
 
   getProductos(): Observable<Producto[]> {
@@ -20,8 +24,10 @@ export class ProductosService {
     return this.http.get<Producto>(this.url + id);
   }
 
-  postProducto(producto: Producto) {
+  postProducto(producto: Producto): Observable<Producto> {
     console.log('postProducto', producto);
+
+    return this.http.post<Producto>(this.url, producto, this.httpOptions);
   }
 
   putProducto(producto: Producto) {
