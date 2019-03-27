@@ -17,4 +17,8 @@ export class ProductosListadoComponent implements OnInit {
     this.productos = this.productosService.getProductos();
   }
 
+  borrarProducto(id: number) {
+    this.productosService.deleteProducto(id);
+  }
+
 }

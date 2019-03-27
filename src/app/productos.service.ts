@@ -29,4 +29,8 @@ export class ProductosService {
   putProducto(producto: Producto) {
     console.log('putProducto', producto);
   }
+
+  deleteProducto(id: number) {
+    console.log('deleteProducto', id);
+  }
 }

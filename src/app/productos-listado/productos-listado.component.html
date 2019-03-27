@@ -14,7 +14,10 @@
     <td>{{ producto.nombre }}</td>
     <td>{{ producto.descripcion }}</td>
     <td>{{ producto.precio | currency: 'EUR'}}</td>
-    <td><button [routerLink]="['/editar', producto.id]">Editar</button><button>Borrar</button></td>
+    <td>
+      <button [routerLink]="['/editar', producto.id]">Editar</button>
+      <button (click)="borrarProducto(producto.id)">Borrar</button>
+    </td>
   </tr>
 </tbody>
 <tfoot>
