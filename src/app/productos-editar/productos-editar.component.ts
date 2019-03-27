@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Producto } from '../producto';
+import { ActivatedRoute } from '@angular/router';
+import { ProductosService } from '../productos.service';
 
 @Component({
   selector: 'app-productos-editar',
@@ -12,12 +14,16 @@ export class ProductosEditarComponent implements OnInit {
     id: -1, nombre: '', descripcion: '', precio: 0.0
   };
 
-  constructor() { }
+  constructor(
+    private route: ActivatedRoute,
+    private productosService: ProductosService) { }
 
   ngOnInit() {
+    const id = this.route.snapshot.params.id;
+    this.producto = this.productosService.getProducto(id);
   }
 
   guardarProducto(): void {
-    console.log(this.producto);
+    this.productosService.postProducto(this.producto);
   }
 }

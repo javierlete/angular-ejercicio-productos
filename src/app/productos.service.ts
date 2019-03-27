@@ -17,4 +17,12 @@ export class ProductosService {
   getProductos(): Producto[] {
     return this.productos;
   }
+
+  getProducto(id: number) {
+    return { id: id, nombre: 'Nombre' + id, descripcion: 'Descripción' + id, precio: id*1.1 };
+  }
+
+  postProducto(producto: Producto) {
+    console.log(producto);
+  }
 }
