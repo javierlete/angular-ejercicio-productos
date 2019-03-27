@@ -14,7 +14,10 @@ export class ProductosListadoComponent implements OnInit {
   constructor(private productosService: ProductosService) { }
 
   ngOnInit() {
-    this.productos = this.productosService.getProductos();
+    //this.productos = this.productosService.getProductos();
+    this.productosService.getProductos().subscribe(
+      (productos: Producto[]) => this.productos = productos
+    );
   }
 
   borrarProducto(id: number) {
