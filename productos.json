@@ -1,34 +1,16 @@
 {
   "productos": [
     {
-      "id": 1,
-      "nombre": "Producto1",
-      "descripcion": "Descripcion1",
+      "id": 2,
+      "nombre": "Nuevo",
+      "descripcion": "Nuevísimo",
       "precio": 12.34
     },
     {
-      "id": 2,
-      "nombre": "Producto2",
-      "descripcion": "Descripcion2",
-      "precio": 2.34
-    },
-    {
-      "id": 3,
-      "nombre": "Nombre765655",
-      "descripcion": "Descripción7",
-      "precio": 56.78
-    },
-    {
       "id": 4,
-      "nombre": "Modificado",
-      "descripcion": "Modificada la descripción",
-      "precio": 4321
-    },
-    {
-      "id": 5,
-      "nombre": "Nuevo",
-      "descripcion": "Nueva descripción",
-      "precio": 56.12
+      "nombre": "Tercero",
+      "descripcion": "Tercerooo",
+      "precio": 3.2
     }
   ]
 }
